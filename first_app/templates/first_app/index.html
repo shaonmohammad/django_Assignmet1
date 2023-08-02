@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title%}Food website{% endblock title%}
+{% block all_food %}
+
+<div class="container">
+    <div class="row">
+      {% for meal in meals %}
+        <div class="col-sm-4">
+          <div class="card m-2">
+            <img src="{{ meal.strMealThumb}}" class="card-img-top" alt="{{ meal.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ meal.strMeal }}</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus alias neque ipsa sit dolores ab saepe eum ex est dignissimos?</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
